@@ -7,12 +7,39 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<meta charset="UTF-8">
 </head>
-<header>
+<header class="text-center">
 	Waitstaff Calculator
 </header>
-<body>
-	Enter the Meal Details
+<body ng-app="myApp">
+<div class="row outline">
+	<div class="col-md-8 col-md-offset-2 container container-xs-height">
+		<div class="row col-wrap row-xs-height">
+			<div class="col-md-6 border col-xs-height col-top">
+				<div class="row bottomBorder">
+					Enter the Meal Details
+				</div>
+				content
+			</div>
+			<div class="col-md-1 col-xs-height col-top"></div>
+			<div class="col-md-5 col-xs-height col-top">
+				<div class="row border">
+					<div class="row bottomBorder">
+						Customer Charges
+					</div>
+					content
+				</div>
+				<br>
+				<div class="row border">
+					<div class="row bottomBorder">
+						My Earnings Info
+					</div>
+					content
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 <footer>
-	<br><br>Version {{version}}
+	<br>Version {{version}}
 </footer>

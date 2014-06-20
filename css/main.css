@@ -3,9 +3,26 @@ body {
   font-family: "Comic Sans MS", serif;
   font-size: 250%;
 }
+header {
+  font-size: 200%;
+}
 footer {
   font-size: small;
   text-align: center;
+}
+.row {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-wrap {
+  overflow: hidden;
+}
+.bottomBorder {
+  border-bottom: solid black;
+}
+.noMargin {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .inputs {
   font-size: 70%;
@@ -14,37 +31,38 @@ footer {
   color: red;
 }
 .border {
-  border-top: thick solid black;
-  border-right: thick solid black;
-  border-bottom: thick solid black;
-  border-left: thick solid black;  
+  border-width: 2px;
+  border-top: solid black;
+  border-right: solid black;
+  border-bottom: solid black;
+  border-left: solid black;  
 }
-.override {
-  border-top: thin solid black;
-  padding: 40px; 
+
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
 }
-.superBig {
-  font-size: 200%;
-  position: relative;
-  top: -15px;
+.row-xs-height {
+    display:table-row;
 }
-.expanded {
-  padding: 20px;
+.col-xs-height {
+    display:table-cell;
+    float:none;
 }
-.row-height-min {
-  height: 140px;
+/* vertical alignment styles */
+.col-top {
+    vertical-align:top;
 }
-.logo {
-  width: 40%;
+.col-middle {
+    vertical-align:middle;
 }
-.smiley {
-  padding: 5px;
-  max-height: 90%;
-  max-width: 90%;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
+.col-bottom {
+    vertical-align:bottom;
 }
-/** {
+
+/* <--- For debugging remove asterisk.
+* {
   outline: 1px solid orange;
 }
