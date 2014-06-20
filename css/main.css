@@ -1,0 +1,70 @@
+body {
+  background-color: white;
+  font-family: "Comic Sans MS", serif;
+  font-size: 250%;
+}
+header {
+  font-size: 200%;
+}
+footer {
+  font-size: small;
+  text-align: center;
+}
+.row {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-wrap {
+  overflow: hidden;
+}
+.bottomBorder {
+  border-bottom: solid black;
+}
+.noMargin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.inputs {
+  font-size: 70%;
+}
+.missing {
+  color: red;
+}
+.border {
+  border-width: 2px;
+  border-top: solid black;
+  border-right: solid black;
+  border-bottom: solid black;
+  border-left: solid black;  
+}
+
+/* Bootstrap 3 responsive columns of same height:
+   source: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
+/* columns of same height styles */
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+/* vertical alignment styles */
+.col-top {
+    vertical-align:top;
+}
+.col-middle {
+    vertical-align:middle;
+}
+.col-bottom {
+    vertical-align:bottom;
+}
+
+/* <--- For debugging remove asterisk.
+* {
+  outline: 1px solid orange;
+}
