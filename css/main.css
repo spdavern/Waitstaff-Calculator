@@ -38,6 +38,8 @@ footer {
   border-left: solid black;  
 }
 
+/* Bootstrap 3 responsive columns of same height:
+   source: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
 /* columns of same height styles */
 .container-xs-height {
     display:table;

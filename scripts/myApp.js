@@ -1,5 +1,5 @@
 angular.module('myApp', [])
-	.constant('VERSION', "0.1")
+	.constant('VERSION', "0.2")
 	.run(function(VERSION, $rootScope) {
 		$rootScope.version = VERSION;
 	})
