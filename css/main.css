@@ -10,22 +10,30 @@ footer {
   font-size: small;
   text-align: center;
 }
-.row {
-  padding-right: 15px;
-  padding-left: 15px;
+hr {
+  border-color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-.col-wrap {
-  overflow: hidden;
+.indent {
+  padding-left: 10px;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .bottomBorder {
   border-bottom: solid black;
 }
-.noMargin {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.inputs {
+.lineItems {
   font-size: 70%;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.submitCancel {
+  vertical-align: middle;
 }
 .missing {
   color: red;
@@ -37,7 +45,17 @@ footer {
   border-bottom: solid black;
   border-left: solid black;  
 }
-
+.col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.col-md-8 {
+  padding-left: 0px;
+  padding-right: 0px;
+}.col-md-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 /* Bootstrap 3 responsive columns of same height:
    source: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
 /* columns of same height styles */
