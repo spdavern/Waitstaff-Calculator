@@ -1,10 +1,11 @@
 body {
   background-color: white;
   font-family: "Comic Sans MS", serif;
-  font-size: 250%;
+  font-size: 150%;
 }
 header {
   font-size: 200%;
+  text-align: center;
 }
 footer {
   font-size: small;
@@ -35,6 +36,16 @@ hr {
 .submitCancel {
   vertical-align: middle;
 }
+.notValid {
+  font-weight: bold;
+  color: red;
+  font-size: 125%;
+}
+.inputValid {
+  font-size: 125%;
+  font-weight: bold;
+  color: green;
+}
 .missing {
   color: red;
 }
@@ -56,32 +67,21 @@ hr {
   padding-left: 0px;
   padding-right: 0px;
 }
-/* Bootstrap 3 responsive columns of same height:
-   source: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height
-/* columns of same height styles */
-.container-xs-height {
-    display:table;
-    padding-left:0px;
-    padding-right:0px;
+.verticalLine {
+  border-right: thin solid black;
 }
-.row-xs-height {
-    display:table-row;
+.paddedLeftRight {
+  padding-right: 10px;
+  padding-left: 10px;
 }
-.col-xs-height {
-    display:table-cell;
-    float:none;
+.version {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+    display: block;
+    width: 100%;
+  text-align: center;
 }
-/* vertical alignment styles */
-.col-top {
-    vertical-align:top;
-}
-.col-middle {
-    vertical-align:middle;
-}
-.col-bottom {
-    vertical-align:bottom;
-}
-
 /* <--- For debugging remove asterisk.
 * {
   outline: 1px solid orange;

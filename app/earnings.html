@@ -1,0 +1,40 @@
+<div class="row outline">
+	<div class="row">
+		<div class="row border">
+			<div class="row bottomBorder indent">
+				My Earnings Info
+			</div>
+			<div class="row lineItems">
+				<div class="col-xs-8 text-right">
+					Tips Total: &nbsp;
+				</div>
+				<div class="col-xs-4 text-left">
+					{{data.tipTotal | currency}}
+				</div>
+			</div>
+			<div class="row lineItems">
+				<div class="col-xs-8 text-right">
+					Meal count: &nbsp;
+				</div>
+				<div class="col-xs-4 text-left">
+					{{data.mealCount}}
+				</div>
+			</div>
+			<div class="row lineItems">
+				<div class="col-xs-8 text-right">
+					Average Tip Per Meal: &nbsp;
+				</div>
+				<div class="col-xs-4 text-left">
+					{{data.AvgTipPerMeal | currency}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-1 col-xs-offset-10">
+		<div class="lineItems">
+			<input type="button" value="Reset" ng-click="reset()">
+		</div>
+	</div>
+</div>
