@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngRoute'])
-	.constant('VERSION', "1.1")
+	.constant('VERSION', "2.0")
 	.run(function(VERSION, $rootScope, $location) {
 		$rootScope.version = VERSION;
 		$rootScope.$on('$routeChangeError', function($location) {
