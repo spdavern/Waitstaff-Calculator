@@ -1,7 +1,21 @@
-angular.module('myApp', [])
-	.constant('VERSION', "1.0")
-	.run(function(VERSION, $rootScope) {
+angular.module('myApp', ['ngRoute'])
+	.constant('VERSION', "1.1")
+	.run(function(VERSION, $rootScope, $location) {
 		$rootScope.version = VERSION;
+		$rootScope.$on('$routeChangeError', function($location) {
+	        $location.path('/');
+	    })
+	})
+	.config(function($routeProvider){
+		$routeProvider.when('/', {
+			templateUrl: './app/home.html'
+		}).when('/newMeal', {
+			templateUrl: './app/new_meal.html'
+		}).when('/myEarnings', {
+			templateUrl: './app/earnings.html'
+		}).otherwise({
+			redirectTo: '/'
+		})
 	})
 	.controller('CalcCtrl', function($scope) {
 		$scope.data = {
@@ -15,7 +29,7 @@ angular.module('myApp', [])
 		$scope.data.tipPercentage = $scope.data.defaultTipPercentage;
 
 		$scope.submit = function() {
-			if($scope.data.mealTotal != 0 && !isNaN($scope.data.mealTotal)) {
+			if(!($scope.data.mealTotal <= 0) && !isNaN($scope.data.mealTotal)) {
 				$scope.data.tipTotal += $scope.data.tip;
 				$scope.data.mealCount += 1;
 				$scope.data.AvgTipPerMeal = $scope.data.tipTotal/$scope.data.mealCount;

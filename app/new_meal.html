@@ -1,0 +1,92 @@
+<div class="row outline">
+	<div class="row border">
+		<div class="row bottomBorder indent">
+			Enter the Meal Details
+		</div>
+		<form name="mealDetails" ng-submit="submit()"   novalidate>
+			<div class="row lineItems">
+				<div class="col-xs-6 text-right">
+					Base Meal Price: $&nbsp;
+				</div>
+				<div class="col-xs-6">
+					<div class="row">
+						<input type="number" ID="Price" name="Price" ng-model="data.mealPrice" class="pull-left" placeholder="0.00" style="width:80%" min="0" required="true" autofocus>&nbsp;
+						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.Price.$error.number"></span>
+						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.Price.$valid"></span>
+					</div>
+					<div class="row">
+						<p ng-if="mealDetails.Price.$error.min" class="notValid text-left">Must be > $0.00</p>
+					</div>
+				</div>
+			</div>
+			<div class="row lineItems">
+				<div class="col-xs-6 text-right">
+					Tax Rate: %&nbsp;
+				</div>
+				<div class="col-xs-6 text-left">
+					<div class="row">
+						<input type="number" name="Tax" ng-model="data.taxRate" style="width:40%" min="0" required="true" value={{data.taxRate}}>&nbsp;
+						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.Tax.$error.number"></span>
+						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.Tax.$valid"></span>
+					</div>
+					<div class="row">
+						<p ng-if="mealDetails.Tax.$error.min" class="notValid text-left">Must be > 0</p>
+					</div>
+				</div>
+			</div>
+			<div class="row lineItems">
+				<div class="col-xs-6 text-right">
+					Tip Percentage: %&nbsp;
+				</div>
+				<div class="col-xs-6 text-left">
+					<div class="row">
+						<input type="number" name="TipPercent" ng-model="data.tipPercentage" style="width:40%" min="0" required="true" value={{data.tipPercentage}}>&nbsp;
+						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.TipPercent.$error.number"></span>
+						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.TipPercent.$valid"></span>
+					</div>
+					<div class="row">
+						<p ng-if="mealDetails.TipPercent.$error.min" class="notValid text-left">Must be > 0</p>
+					</div>
+				</div>
+			</div>
+			<div class="text-center submitCancel lineItems">
+				<input type="submit" value="Submit" ng-disabled="mealDetails.$invalid"> &nbsp;
+				<input type="button" value="Cancel" ng-click="resetMeal()">  &nbsp;
+				<input type="button" value="Defaults" ng-click="resetDefaults()">
+			</div>
+		</form>
+	</div>
+	<br>
+	<div class="row border">
+		<div class="row bottomBorder indent">
+			Customer Charges
+		</div>
+		<div class="row lineItems">
+			<div class="col-xs-6 text-right">
+				Subtotal: &nbsp;
+			</div>
+			<div class="col-xs-6 text-left">
+				{{calcSubtotal() | currency}}
+			</div>
+		</div>
+		<div class="row lineItems">
+			<div class="col-xs-6 text-right">
+				Tip: &nbsp;
+			</div>
+			<div class="col-xs-6 text-left">
+				{{calcTipAmt() | currency}}
+			</div>
+		</div>
+		<div>
+			<hr width="60%">
+		</div>
+		<div class="row lineItems">
+			<div class="col-xs-6 text-right">
+				Total: &nbsp;
+			</div>
+			<div class="col-xs-6 text-left">
+				{{calcMealTotal() | currency}}
+			</div>
+		</div>
+	</div>
+</div>

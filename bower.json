@@ -1,0 +1,23 @@
+{
+  "name": "Waitstaff-Calculator",
+  "version": "1.0.0",
+  "homepage": "https://github.com/spdavern/Waitstaff-Calculator",
+  "authors": [
+    "spdavern <sean@lizandsean.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.19",
+    "angular-route": "~1.2.19",
+    "bootstrap": "~3.2.0"
+  }
+}

@@ -1,132 +1,29 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
 	<title>Waiter Earnings Calculator</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
-	<script src="./scripts/myApp.js"></script>
-  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./css/main.css">
 	<meta charset="UTF-8">
 </head>
-<header class="text-center">
-	Waitstaff Calculator
-</header>
+<header>Waitstaff Calculator</header>
 <body ng-app="myApp" ng-controller="CalcCtrl">
-<div class="row outline">
-	<div class="col-md-8 col-md-offset-2 container container-xs-height">
-		<div class="row row-xs-height">
-			<div class="border col-xs-height col-top">
-				<div class="row bottomBorder indent">
-					Enter the Meal Details
-				</div>
-				<form name="mealDetails" ng-submit="submit()" ui-keypress="{enter: 'submit()'}"  novalidate>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Base Meal Price: $&nbsp;
-						</div>
-						<div class="col-md-6">
-							<input type="number" ID="Price" name="Price" ng-model="data.mealPrice" class="pull-left" placeholder="0.00" autofocus>
-						</div>
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Tax Rate: %&nbsp;
-						</div>
-						<div class="col-md-6 text-left">
-							<input type="number" name="Tax" ng-model="data.taxRate"style="width:75px" value={{data.taxRate}}>
-						</div>
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Tip Percentage: %&nbsp;
-						</div>
-						<div class="col-md-6 text-left">
-							<input type="number" name="TipPercent" ng-model="data.tipPercentage" style="width:75px" value={{data.tipPercentage}}>
-						</div>
-					</div>
-					<div class="text-center submitCancel lineItems">
-						<input type="submit" value="Submit"> &nbsp;
-						<input type="button" value="Cancel" ng-click="resetMeal()">  &nbsp;
-						<input type="button" value="Defaults" ng-click="resetDefaults()">
-					</div>
-				</form>
-			</div>
-			<div class="col-md-1 col-xs-height col-top"></div>
-			<div class="col-md-5 col-xs-height col-top">
-				<div class="row border">
-					<div class="row bottomBorder indent">
-						Customer Charges
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Subtotal: &nbsp;
-						</div>
-						<div class="col-md-6 text-left">
-							{{calcSubtotal() | currency}}
-						</div>
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Tip: &nbsp;
-						</div>
-						<div class="col-md-6 text-left">
-							{{calcTipAmt() | currency}}
-						</div>
-					</div>
-					<div>
-						<hr width="60%">
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-6 text-right">
-							Total: &nbsp;
-						</div>
-						<div class="col-md-6 text-left">
-							{{calcMealTotal() | currency}}
-						</div>
-					</div>
-				</div>
-				<br>
-				<div class="row border">
-					<div class="row bottomBorder indent">
-						My Earnings Info
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-8 text-right">
-							Tips Total: &nbsp;
-						</div>
-						<div class="col-md-4 text-left">
-							{{data.tipTotal | currency}}
-						</div>
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-8 text-right">
-							Meal count: &nbsp;
-						</div>
-						<div class="col-md-4 text-left">
-							{{data.mealCount}}
-						</div>
-					</div>
-					<div class="row lineItems">
-						<div class="col-md-8 text-right">
-							Average Tip Per Meal: &nbsp;
-						</div>
-						<div class="col-md-4 text-left">
-							{{data.AvgTipPerMeal | currency}}
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
+	<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 container-fluid">
+		<div class="text-center">
+		<nav>
+			<a class="verticalLine paddedLeftRight" ng-if="true" href="#/">Home</a>
+			<a class="verticalLine paddedLeftRight" href="#/newMeal">New Meal</a>
+			<a class="paddedLeftRight" href="#/myEarnings">My Earnings</a>
+		</nav>
+			<br><br>
 		</div>
+		<div ng-view></div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-md-1 col-md-offset-10">
-		<div class="lineItems">
-			<input type="button" value="Reset" ng-click="reset()">
-		</div>
-	</div>
-</div>
+	<script type="text/javascript" src="./app/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./app/bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="./scripts/myApp.js"></script>
+	<link rel="stylesheet" href="./app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main.css">
 </body>
-<footer>
-	<br>Version {{version}}
+<footer class="version">
+	<br>Waitstaff Calculator version: {{version}}
 </footer>
+</html>
