@@ -9,9 +9,9 @@
 	<div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 container-fluid">
 		<div class="text-center">
 		<nav>
-			<a class="verticalLine paddedLeftRight" ng-if="true" href="#/">Home</a>
-			<a class="verticalLine paddedLeftRight" href="#/newMeal">New Meal</a>
-			<a class="paddedLeftRight" href="#/myEarnings">My Earnings</a>
+			<a class="verticalLine paddedLeftRight" ng-class="{active: isPath('/')}" href="#/">Home</a>
+			<a class="verticalLine paddedLeftRight" ng-class="{active: isPath('/newMeal')}" href="#/newMeal">New Meal</a>
+			<a class="paddedLeftRight" ng-class="{active: isPath('/myEarnings')}" href="#/myEarnings">My Earnings</a>
 		</nav>
 			<br><br>
 		</div>
