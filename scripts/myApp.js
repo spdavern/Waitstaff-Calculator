@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngRoute'])
-	.constant('VERSION', "2.0")
+	.constant('VERSION', "2.1")
 	.run(function(VERSION, $rootScope, $location) {
 		$rootScope.version = VERSION;
 		$rootScope.$on('$routeChangeError', function($location) {
@@ -17,13 +17,16 @@ angular.module('myApp', ['ngRoute'])
 			redirectTo: '/'
 		})
 	})
-	.controller('CalcCtrl', function($scope) {
+	.controller('CalcCtrl', function($scope, $location) {
 		$scope.data = {
 			defaultTaxRate: 6.5,
 			defaultTipPercentage: 15,
 			tipTotal: 0,
 			mealCount: 0,
 			AvgTipPerMeal: 0
+		};
+		$scope.isPath = function(comparedPath) {
+			return comparedPath==$location.path();
 		};
 		$scope.data.taxRate = $scope.data.defaultTaxRate;
 		$scope.data.tipPercentage = $scope.data.defaultTipPercentage;

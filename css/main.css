@@ -11,6 +11,17 @@ footer {
   font-size: small;
   text-align: center;
 }
+a {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+}
+a.active {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+  color: black;
+}
 hr {
   border-color: black;
   margin-top: 5px;
