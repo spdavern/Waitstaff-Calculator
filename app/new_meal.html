@@ -12,7 +12,7 @@
 					<div class="row">
 						<input type="number" ID="Price" name="Price" ng-model="data.mealPrice" class="pull-left" placeholder="0.00" style="width:70%" min="0" required="true" autofocus>&nbsp;
 						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.Price.$error.number || mealDetails.Price.$error.min"></span>
-						<span class="notValid" ng-if="mealDetails.Price.$error.min">< 0</span>
+						<span class="notValid" ng-if="mealDetails.Price.$error.min">&lt; 0</span>
 						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.Price.$valid"></span>
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 					<div class="row">
 						<input type="number" name="Tax" ng-model="data.taxRate" style="width:40%" min="0" required="true" value={{data.taxRate}}>&nbsp;
 						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.Tax.$error.number || mealDetails.Tax.$error.min"></span>
-						<span class="notValid" ng-if="mealDetails.Tax.$error.min">< 0</span>
+						<span class="notValid" ng-if="mealDetails.Tax.$error.min">&lt; 0</span>
 						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.Tax.$valid"></span>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 					<div class="row">
 						<input type="number" name="TipPercent" ng-model="data.tipPercentage" style="width:40%" min="0" required="true" value={{data.tipPercentage}}>&nbsp;
 						<span class="notValid glyphicon glyphicon-ban-circle" ng-if="mealDetails.TipPercent.$error.number || mealDetails.TipPercent.$error.min"></span>
-						<span class="notValid" ng-if="mealDetails.TipPercent.$error.min">< 0</span>
+						<span class="notValid" ng-if="mealDetails.TipPercent.$error.min">&lt; 0</span>
 						<span class="inputValid glyphicon glyphicon-ok" ng-if="mealDetails.TipPercent.$valid"></span>
 					</div>
 				</div>
