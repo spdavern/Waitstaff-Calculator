@@ -18,6 +18,7 @@
   "dependencies": {
     "angular": "~1.2.19",
     "angular-route": "~1.2.19",
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "angular-animate": "~1.2.19"
   }
 }

@@ -1,11 +1,11 @@
-angular.module('myApp', ['ngRoute'])
-	.constant('VERSION', "2.2")
-	.run(function(VERSION, $rootScope, $location) {
+angular.module('myApp', ['ngRoute', 'ngAnimate'])
+	.constant('VERSION', "2.3")
+	.run(function(VERSION, $rootScope, $location, $timeout) {
 		$rootScope.version = VERSION;
 		$rootScope.$on('$routeChangeError', function($location) {
 	        $location.path('/');
-	    })
-	})
+	    });
+    })
 	.config(function($routeProvider){
 		$routeProvider.when('/', {
 			templateUrl: './app/home.html'
@@ -19,7 +19,7 @@ angular.module('myApp', ['ngRoute'])
 		})
 	})
 	.controller('newMealCtrl', function($scope, $location) {
-		// set focus to price input field upon load of partial.
+		// set focus to 'Price' input field upon load of partial.
 		document.getElementById('Price').focus();
 	})
 	.controller('CalcCtrl', function($scope, $location) {

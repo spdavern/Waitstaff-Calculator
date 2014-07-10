@@ -93,6 +93,20 @@ hr {
     width: 100%;
   text-align: center;
 }
+.animate-view-container { position:relative; min-height: 100%; }
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+    transition:0.3s linear all;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.animate-view.ng-enter { opacity:0; }
+.animate-view.ng-enter.ng-enter-active { opacity:1; }
+.animate-view.ng-leave { opacity:1; }
+.animate-view.ng-leave.ng-leave-active { opacity:0; }
 /* <--- For debugging remove asterisk.
 * {
   outline: 1px solid orange;
