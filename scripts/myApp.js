@@ -1,5 +1,5 @@
 angular.module('myApp', ['ngRoute'])
-	.constant('VERSION', "2.1")
+	.constant('VERSION', "2.2")
 	.run(function(VERSION, $rootScope, $location) {
 		$rootScope.version = VERSION;
 		$rootScope.$on('$routeChangeError', function($location) {
@@ -10,12 +10,17 @@ angular.module('myApp', ['ngRoute'])
 		$routeProvider.when('/', {
 			templateUrl: './app/home.html'
 		}).when('/newMeal', {
-			templateUrl: './app/new_meal.html'
+			templateUrl: './app/new_meal.html',
+			controller: 'newMealCtrl'
 		}).when('/myEarnings', {
 			templateUrl: './app/earnings.html'
 		}).otherwise({
 			redirectTo: '/'
 		})
+	})
+	.controller('newMealCtrl', function($scope, $location) {
+		// set focus to price input field upon load of partial.
+		document.getElementById('Price').focus();
 	})
 	.controller('CalcCtrl', function($scope, $location) {
 		$scope.data = {
